@@ -1036,10 +1036,10 @@ DROP TABLE IF EXISTS `workgroup`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `workgroup` (
   `workgroup_id` int(10) NOT NULL AUTO_INCREMENT,
-  `description` varchar(255) NOT NULL,
+  `description` varchar(255),
   `name` varchar(255) NOT NULL,
   `external_id` varchar(255) DEFAULT NULL,
-  `type` varchar(20) DEFAULT 'normal',
+  `type` enum('normal','admin','demo') DEFAULT 'normal',
   `max_mac_address_per_end` int(10) DEFAULT '10',
   `max_circuits` int(10) DEFAULT '20',
   `max_circuit_endpoints` int(10) DEFAULT '10',

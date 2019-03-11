@@ -1083,7 +1083,7 @@ DROP TABLE IF EXISTS `workgroup`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `workgroup` (
   `workgroup_id` int(10) NOT NULL AUTO_INCREMENT,
-  `description` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
   `external_id` varchar(255) DEFAULT NULL,
   `type` varchar(20) DEFAULT 'normal',
